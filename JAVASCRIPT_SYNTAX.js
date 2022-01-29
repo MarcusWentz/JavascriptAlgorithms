@@ -16,9 +16,10 @@ console.log(array[0] + " " + array[1] + " " + array[2])
 
 const StructExample = {
   fruit : "apple",
-  insideStructObject : true
+  insideStructObject : true,
+  number : 4
 }
 const structArray = [StructExample]
 
 console.log("Struct value " + StructExample.insideStructObject)
-console.log("Struct array " + structArray[0].fruit)
+console.log("Struct array " + structArray[0].fruit + " and " + structArray[0].number)
