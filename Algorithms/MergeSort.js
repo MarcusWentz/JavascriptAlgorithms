@@ -12,10 +12,10 @@ if(nums.length == 1){
 function mergeSortAdjust(left, right) {
     const nums = []; //Need to keep new values stored in an array.
     while(left.length && right.length) { //Stop moving until slices are 0.
-        if(left[0]<right[0]){
-           nums.push(left.shift()) //Push left small value left
+        if(left[0]<right[0]){ //Check if left is smaller than right.
+           nums.push(left.shift()) //Push left left shift
            } else {
-            nums.push(right.shift()) //Push left large value right
+            nums.push(right.shift()) //Push the right shift
            }
     }
     return nums.concat(left.slice()).concat(right.slice()) //Concat left.right slices for our new array.
