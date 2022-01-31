@@ -3,8 +3,8 @@ var rightSideView = function(root) {
         return []
     }
     
-    let queue = [root]
-    let result = []
+    const queue = [root]
+    const result = []
     
     while(queue.length){
         let queueLengthStored = queue.length
