@@ -1,11 +1,11 @@
-let hasPathSum = function(node, sum) {
-    if (!node) {
-        return false;
+var hasPathSum = function(node, sum) {
+    if(!node) {
+        return false
+    }
+            
+    if(!node.left && !node.right && node.val == sum) { //Make sure left and right are null. Then see node matches target.
+        return true
     }
     
-    if (sum == node.val && !node.left && !node.right) {
-        return true;
-    }
-    
-    return hasPathSum(node.left, sum - node.val) || hasPathSum(node.right, sum - node.val);
+    return hasPathSum(node.left, sum - node.val) || hasPathSum(node.right, sum - node.val) //Search left and right
 };
