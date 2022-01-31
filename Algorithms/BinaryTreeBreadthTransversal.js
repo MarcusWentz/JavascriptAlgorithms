@@ -20,6 +20,5 @@ var levelOrder = function(root) {
             }
         }
     }
-    return result
-      
+    return result    
 };
