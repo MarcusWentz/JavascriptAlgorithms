@@ -1,14 +1,19 @@
 var invertTree = function(root) {
-    if(root === null) {
-        return null
+    
+    function dfs(root) { //Simple case where we just pass the root of the whole tree. 
+        if(!root) { //Base case. 
+            return //return alone is the same as return null
+        }
+
+        let storage = root.left //Logic to handle per node passed.
+        root.left = root.right
+        root.right = storage
+
+        dfs(root.left)  //Pass through left branch.
+        dfs(root.right) //Then pass through right branch. 
     }
     
-    let storage = root.left
-    root.left = root.right
-    root.right = storage
-        
-    invertTree(root.left) //Move all the way left until we hit a null.
-    invertTree(root.right) //Move all the way right until we hit a null.
-    
+    dfs(root)
     return root
+    
 };
