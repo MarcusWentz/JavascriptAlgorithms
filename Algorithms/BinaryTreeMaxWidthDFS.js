@@ -3,12 +3,11 @@ var widthOfBinaryTree = function(root) {
     let maxWidth = 0;
     
     function dfs(node, level, pos) {
-        if(!node) 
-        {
-            return null; //Same as just return.
+        if(!node)  {
+            return //Same as return null.
         }
         if(minPos[level] === undefined){
-            minPos.push(pos);
+            minPos.push(pos)
         }        
         const diff = pos - minPos[level];
         maxWidth = Math.max(maxWidth, diff+1);
