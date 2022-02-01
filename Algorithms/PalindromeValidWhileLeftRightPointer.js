@@ -5,7 +5,7 @@ function isPalindrome(s) {
     let filterArray = []
     for(let i = 0; i < s.length; i++){
         if(s[i] != " " && s[i] != "," && s[i] != "!" && s[i] != ":" && s[i] != "." && s[i] != "@" ) {
-           filterArray.push(s[i].toLowerCase() );
+           filterArray.(s[i].toLowerCase() );
            }
     }
     
@@ -24,3 +24,5 @@ function isPalindrome(s) {
     
     return true
 };
+
+//Useful replacement trick hard to remember: s.replace(/[^a-zA-Z0-9]/g,'')
