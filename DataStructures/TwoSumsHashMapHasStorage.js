@@ -8,7 +8,7 @@ var twoSum = function(nums, target) {
     for(let i = 0; i < nums.length; i++) {
             let difference = target - nums[i];
             if(mapping.has(difference)) { //Did we find this difference in our hash map before?
-               return [i, mapping.get(difference)] //Yes, return it.
+               return [mapping.get(difference),i] //Yes, return it.
              }
             mapping.set(nums[i], i)
         }
