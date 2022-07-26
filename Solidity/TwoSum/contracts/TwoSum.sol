@@ -12,7 +12,7 @@ contract TwoSum {
     }
 
     function TwoSumFind(uint[] memory nums, uint target) public validArray(nums) { //Pad input array with 0 to handle nums[i] edge case.
-        for(uint i = 0; i < nums.length; i++) {
+        for(uint i = 1; i < nums.length; i++) {
             uint difference = target - nums[i];
             if(differenceIndex[difference] != 0) { // Mappings have default value as 0, not null.
                 answerIndexArray = [differenceIndex[difference]-1,i-1]; //Remove the 0 pad at the start.
